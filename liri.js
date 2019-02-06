@@ -11,16 +11,15 @@ var moment = require("moment");
 
 var fs = require("fs");
 
-//Take input as first cli argument and remove the dashes
+//Take input as first argument 
 var userInput = process.argv[2]
 
-//Take query as second cli argument
+//Take query as second argument
 var query = process.argv[3]
 
 //Set up a methods object to take all of the commands and run the functions
 var commands = {
-    //  ------------------ BANDS IN TOWN ------------------
-    // node liri.js concert-this <artist/band name here>
+    
     concertthis: function () {
         if (!query) {
             query = "Maroon 5"
@@ -60,8 +59,7 @@ var commands = {
             }
         });
     },
-    //  ------------------ OMDB ------------------
-    //node liri.js movie-this '<movie name here>'
+    
     moviethis: function () {
         if (!query) {
             query = "Mr. Nobody"
